@@ -10,6 +10,10 @@
         <h1>Website under maintence.</h1>
         <p id="randomtext"></p>
 
+        <div class="footer">
+            <a href="https://github.com/KotwOSS">Explore Projects</a>
+        </div>
+
         <script>
             const captions = [
                 "This isn't quite what you expected",
@@ -24,12 +28,29 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
 
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                color: rgb(145, 145, 145);
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: rgb(100, 100, 100);
+            }
+
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
                 color: white;
                 font-family: 'Rowdies', cursive;
+            }
+
+            .footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
 
             body {
@@ -39,6 +60,8 @@
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
+                overflow-x: hidden;
+                overflow-y: scroll;
             }
 
             p {
