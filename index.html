@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KekOnTheWorld Opensource</title>
+    </head>
+    <body>
+        <h1>Website under maintence.</h1>
+        <p id="randomtext"></p>
+
+        <script>
+            const captions = [
+                "This isn't quite what you expected",
+                "Wow this is empty",
+                "This looks bad",
+                "What is this?",
+                "Looks like you didn't expect this"
+            ];
+            document.getElementById("randomtext").innerText = captions[Math.floor(Math.random()*captions.length)];
+        </script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                color: white;
+                font-family: 'Rowdies', cursive;
+            }
+
+            body {
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            p {
+                margin-top: 8px;
+                color: gray;
+                font-size: 20px;
+            }
+        </style>
+    </body>
+</html>
