@@ -52,3 +52,29 @@ p {
 .short {
 	max-width: 400px;
 }
+
+button {
+    color: var(--button-color);
+
+    font-size: 20px;
+    padding: 5px 15px;
+    
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    background: var(--button-background);
+    background-size: 200%;
+
+    transition: all 0.3s ease;
+    font-weight: 500;
+
+    margin: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    animation: 1s button infinite linear;
+    background-position-x: 100%;
+}

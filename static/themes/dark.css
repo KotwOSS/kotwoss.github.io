@@ -4,9 +4,12 @@
 	--color: white;
 	--color-secondary: rgb(180, 180, 180);
 
-	--header-background: rgb(236, 44, 227);
+	--header-background: linear-gradient(45deg, rgb(236, 44, 227), rgb(0, 158, 61));
 	--header-color: black;
 	--header-color-secondary: rgb(31, 31, 31);
+
+    --button-color: black;
+    --button-background: linear-gradient(45deg, rgb(236, 44, 92), rgb(236, 191, 44));
 
 	--footer-border: 1px solid rgba(255, 255, 255, 0.1);
 	--footer-emoji: '👋';

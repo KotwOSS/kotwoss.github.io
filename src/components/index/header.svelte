@@ -23,7 +23,7 @@
 
 <div class="spacer" />
 <header
-	style:opacity={1 - Math.min(Math.max(0, scrollY - val), val) / val}
+	style:opacity={1 - (scrollY - val) / val}
 	style:height={innerHeight - scrollY + 'px'}
 >
 	<div class="content">
@@ -97,11 +97,10 @@
 	header {
 		text-align: center;
 		padding-top: var(--nav-height);
-		background-color: var(--header-background);
+		background: var(--header-background);
 		color: var(--background);
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 20px;
 		width: 100%;
 		position: fixed;
 		top: 0;

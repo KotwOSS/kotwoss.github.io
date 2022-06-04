@@ -4,7 +4,8 @@
 	--color: rgb(0, 0, 0);
 	--color-secondary: rgb(71, 71, 71);
 
-	--header-background: rgb(165, 30, 158);
+	/* --header-background: rgb(165, 30, 158); */
+    --header-background: linear-gradient(45deg, rgb(236, 44, 227), rgb(0, 158, 61));
 	--header-color: white;
 	--header-color-secondary: rgb(211, 211, 211);
 
