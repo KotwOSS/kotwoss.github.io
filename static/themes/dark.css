@@ -8,8 +8,8 @@
 	--header-color: black;
 	--header-color-secondary: rgb(31, 31, 31);
 
-    --button-color: black;
-    --button-background: linear-gradient(45deg, rgb(236, 44, 92), rgb(236, 191, 44));
+	--button-color: black;
+	--button-background: linear-gradient(45deg, rgb(236, 44, 92), rgb(236, 191, 44));
 
 	--footer-border: 1px solid rgba(255, 255, 255, 0.1);
 	--footer-emoji: '👋';

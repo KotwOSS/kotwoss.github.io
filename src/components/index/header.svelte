@@ -22,10 +22,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <div class="spacer" />
-<header
-	style:opacity={1 - (scrollY - val) / val}
-	style:height={innerHeight - scrollY + 'px'}
->
+<header style:opacity={1 - (scrollY - val) / val} style:height={innerHeight - scrollY + 'px'}>
 	<div class="content">
 		<h1 class="header">KotwOSS</h1>
 		<p class="header">The <span><Typer {texts} /></span> Github organization.</p>

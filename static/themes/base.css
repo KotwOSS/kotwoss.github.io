@@ -54,27 +54,27 @@ p {
 }
 
 button {
-    color: var(--button-color);
+	color: var(--button-color);
 
-    font-size: 20px;
-    padding: 5px 15px;
-    
-    outline: none;
-    border: none;
-    border-radius: 10px;
+	font-size: 20px;
+	padding: 5px 15px;
 
-    background: var(--button-background);
-    background-size: 200%;
+	outline: none;
+	border: none;
+	border-radius: 10px;
 
-    transition: all 0.3s ease;
-    font-weight: 500;
+	background: var(--button-background);
+	background-size: 200%;
 
-    margin: 2px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+
+	margin: 2px;
 }
 
 button:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    animation: 1s button infinite linear;
-    background-position-x: 100%;
+	cursor: pointer;
+	transform: scale(1.05);
+	animation: 1s button infinite linear;
+	background-position-x: 100%;
 }
