@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import About from '$components/index/about.svelte';
+	import Header from '$components/index/header.svelte';
+
+	import { fade } from 'svelte/transition';
+</script>
+
+<main transition:fade={{ duration: 200 }}>
+	<Header />
+	<About />
+</main>
+
+<style>
+	main {
+		min-height: 200vh;
+	}
+</style>

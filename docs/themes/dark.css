@@ -1,0 +1,16 @@
+:root {
+	--background: black;
+
+	--color: white;
+	--color-secondary: rgb(180, 180, 180);
+
+	--header-background: rgb(236, 44, 227);
+	--header-color: black;
+	--header-color-secondary: rgb(31, 31, 31);
+
+	--footer-border: 1px solid rgba(255, 255, 255, 0.1);
+	--footer-emoji: '👋';
+
+	--a-border: 1px solid rgb(236, 44, 227);
+	--a-color: rgb(236, 44, 227);
+}
