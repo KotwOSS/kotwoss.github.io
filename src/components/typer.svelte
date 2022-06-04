@@ -60,13 +60,17 @@
 </span>
 
 <style>
+	span {
+		font-size: 25px;
+	}
+
 	span.select {
-		background-color: #ff0;
+		background-color: rgb(255, 153, 0);
 	}
 
 	#carret {
 		display: inline-block;
-		height: 24px;
+		height: 29px;
 		width: 2px;
 		border-radius: 1px;
 		transform: translate(1px, 5px);

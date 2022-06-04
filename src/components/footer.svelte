@@ -19,7 +19,7 @@
 			<h1 class="emoji" />
 			<p class="short">
 				Hello mate. This <a href="https://choosealicense.com/licenses/mit/">opensource</a> website
-				was written using <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>. Check it
+				was created using <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>. Check it
 				out on <a href="https://github.com/KotwOSS/kotwoss.github.io/" target="_blank">Github</a>.
 			</p>
 		</div>
@@ -86,6 +86,28 @@
 		justify-content: center;
 		padding: 30px 20px;
 		row-gap: 15px;
+	}
+
+	@keyframes wave {
+		0% {
+			transform: rotate(0);
+		}
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: rotate(0deg);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+		100% {
+			transform: rotate(0);
+		}
+	}
+
+	.emoji {
+		animation: wave 3s infinite linear;
 	}
 
 	.emoji::before {

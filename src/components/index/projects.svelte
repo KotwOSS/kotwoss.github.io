@@ -9,7 +9,6 @@
 	const triggers = new Triggers();
 
 	$: anim = scrollY / innerHeight - 3.085;
-	$: console.log(scrollY, innerHeight, scrollY - 80 > innerHeight * 2);
 	$: if (scrollY < 10 + innerHeight * 2) triggers.resetTriggers();
 
 	$: pinDown = scrollY - 80 < innerHeight * 4;

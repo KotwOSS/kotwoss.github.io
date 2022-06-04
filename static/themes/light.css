@@ -4,10 +4,12 @@
 	--color: rgb(0, 0, 0);
 	--color-secondary: rgb(71, 71, 71);
 
-	/* --header-background: rgb(165, 30, 158); */
 	--header-background: linear-gradient(45deg, rgb(236, 44, 227), rgb(0, 158, 61));
 	--header-color: white;
 	--header-color-secondary: rgb(211, 211, 211);
+
+	--button-color: white;
+	--button-background: linear-gradient(45deg, rgb(236, 44, 92), rgb(236, 191, 44));
 
 	--footer-border: 1px solid rgba(0, 0, 0, 0.2);
 	--footer-emoji: '👋🏿';
