@@ -80,6 +80,7 @@
 
 	p {
 		font-size: 25px;
+        text-align: center;
 	}
 
 	.buttons {
