@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Typer from '$components/typer.svelte';
-	import { Triggers } from '$lib/triggers';
+	import Typer from "$components/typer.svelte";
+	import { Triggers } from "$lib/triggers";
 
 	const texts = [
-		'creators',
-		'creative',
-		'developers',
-		'designers',
-		'dreamers',
-		'creators',
-		'programmers'
+		"creators",
+		"creative",
+		"developers",
+		"designers",
+		"dreamers",
+		"creators",
+		"programmers"
 	];
 
 	let scrollY: number;
@@ -34,7 +34,7 @@
 {/if}
 
 <main
-	style:position={pin ? 'fixed' : 'relative'}
+	style:position={pin ? "fixed" : "relative"}
 	style:opacity={1 - Math.max(0, scrollY - 1.8 * innerHeight - val) / val}
 >
 	<div class="category left">
@@ -56,7 +56,7 @@
 </main>
 
 {#if pinDown}
-	<div style:height={pin ? '200vh' : '100vh'} />
+	<div style:height={pin ? "200vh" : "100vh"} />
 {/if}
 
 <style>

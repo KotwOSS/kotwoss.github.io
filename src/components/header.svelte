@@ -1,25 +1,9 @@
-<script lang="ts">
-	let scrollY: number;
-	let innerHeight: number;
-</script>
-
-<svelte:window bind:scrollY bind:innerHeight />
-
-<div class="spacer" />
-<header
-	style:opacity={1 - Math.min(Math.max(0, scrollY - innerHeight + 300), 300) / 300}
-	style:height={innerHeight - scrollY + 'px'}
->
+<header>
 	<div class="content">
 		<slot />
 	</div>
-	<div class="wrapper" style:top={innerHeight - scrollY - 40 + 'px'}>
-		<svg
-			class="absolute bottom-0 left-0 w-full text-white"
-			xmlns="http://www.w3.org/2000/svg"
-			height="40"
-			preserveAspectRatio="none"
-		>
+	<div class="wrapper">
+		<svg xmlns="http://www.w3.org/2000/svg" height="40" preserveAspectRatio="none">
 			<defs>
 				<clipPath id="svgPath">
 					<pattern
@@ -46,10 +30,6 @@
 </header>
 
 <style>
-	.spacer {
-		height: calc(100vh + 80px);
-	}
-
 	@keyframes svg {
 		0% {
 			transform: translateX(0);
@@ -80,19 +60,16 @@
 	header {
 		text-align: center;
 		padding-top: var(--nav-height);
-		background-color: var(--header-background);
+		background: var(--header-background);
 		color: var(--background);
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 20px;
 		width: 100%;
-		position: fixed;
-		top: 0;
 	}
 
 	.wrapper {
 		height: 40px;
-		position: absolute;
 		animation: 2s wrapper infinite ease-in;
 	}
 

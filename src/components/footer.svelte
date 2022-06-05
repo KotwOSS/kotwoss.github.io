@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { privacy, imprint } from '$lib/config';
+	import { privacy, imprint } from "$lib/config";
 
-	let themeEl = document.getElementById('theme') as HTMLElement;
+	let themeEl = document.getElementById("theme") as HTMLElement;
 
 	let events: { name: string; link: string }[];
 	let xmlHttp = new XMLHttpRequest();
 	xmlHttp.onreadystatechange = function () {
 		if (xmlHttp.readyState === 4) events = JSON.parse(xmlHttp.response);
 	};
-	xmlHttp.open('GET', 'https://events.kotw.dev/recent.json', true);
+	xmlHttp.open("GET", "https://events.kotw.dev/recent.json", true);
 	xmlHttp.send(null);
 </script>
 
@@ -37,15 +37,15 @@
 			<div class="themes category">
 				<h4>🌈 Theme</h4>
 				<ul>
-					{#each Object.entries({ dark: '⚫ Dark', light: '⚪ Light' }) as theme}
+					{#each Object.entries({ dark: "⚫ Dark", light: "⚪ Light" }) as theme}
 						<div class="theme">
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								href="#"
 								on:click={(e) => {
 									e.preventDefault();
-									localStorage.setItem('theme', theme[0]);
-									themeEl.setAttribute('href', `/themes/${theme[0]}.css`);
+									localStorage.setItem("theme", theme[0]);
+									themeEl.setAttribute("href", `/themes/${theme[0]}.css`);
 								}}>{theme[1]}</a
 							>
 						</div>

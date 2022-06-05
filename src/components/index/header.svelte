@@ -1,17 +1,6 @@
 <script lang="ts">
-	import Typer from '$components/typer.svelte';
-
-	const texts = [
-		'purely opensource',
-		'truly amazing',
-		'awesome',
-		'smart',
-		'opensource',
-		'best',
-		'nicest',
-		'MIT licensed',
-		'free'
-	];
+	import Typer from "$components/typer.svelte";
+	import { index_texts } from "$lib/config";
 
 	let scrollY: number;
 	let innerHeight: number;
@@ -22,18 +11,13 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <div class="spacer" />
-<header style:opacity={1 - (scrollY - val) / val} style:height={innerHeight - scrollY + 'px'}>
+<header style:opacity={1 - (scrollY - val) / val} style:height={innerHeight - scrollY + "px"}>
 	<div class="content">
 		<h1 class="header">KotwOSS</h1>
-		<p class="header">The <span><Typer {texts} /></span> Github organization.</p>
+		<p class="header">The <span><Typer texts={index_texts} /></span> Github organization.</p>
 	</div>
-	<div class="wrapper" style:top={innerHeight - scrollY - 40 + 'px'}>
-		<svg
-			class="absolute bottom-0 left-0 w-full text-white"
-			xmlns="http://www.w3.org/2000/svg"
-			height="40"
-			preserveAspectRatio="none"
-		>
+	<div class="wrapper" style:top={innerHeight - scrollY - 40 + "px"}>
+		<svg xmlns="http://www.w3.org/2000/svg" height="40" preserveAspectRatio="none">
 			<defs>
 				<clipPath id="svgPath">
 					<pattern
@@ -129,16 +113,6 @@
 
 	.content > :global(p) {
 		color: var(--header-color-secondary);
-	}
-
-	h1.header {
-		margin-bottom: 20px;
-		font-size: 40px;
-		font-weight: 800;
-	}
-
-	p.header {
-		font-size: 25px;
 	}
 
 	span {

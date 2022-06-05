@@ -1,6 +1,6 @@
-import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
-import path from 'path';
+import adapter from "@sveltejs/adapter-static";
+import preprocess from "svelte-preprocess";
+import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,9 +9,9 @@ const config = {
 	preprocess: preprocess(),
 	kit: {
 		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs',
-			fallback: '404.html'
+			pages: "docs",
+			assets: "docs",
+			fallback: "404.html"
 		}),
 		prerender: {
 			default: true
@@ -19,12 +19,12 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$lib: path.resolve('src/lib'),
-					$components: path.resolve('./src/components')
+					$lib: path.resolve("src/lib"),
+					$components: path.resolve("./src/components")
 				}
 			}
 		},
-		trailingSlash: 'always'
+		trailingSlash: "always"
 	}
 };
 

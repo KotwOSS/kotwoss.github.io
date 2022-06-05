@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { goto } from "$app/navigation";
 
-	import { Triggers } from '$lib/triggers';
+	import { Triggers } from "$lib/triggers";
 
 	let scrollY: number;
 	let innerHeight: number;
@@ -15,11 +15,11 @@
 	$: pin = scrollY - 80 > innerHeight * 3 && pinDown;
 
 	function gotoProjects() {
-		goto('/projects');
+		goto("/projects");
 	}
 
 	function gotoGithub() {
-		window.location.assign('https://github.com/orgs/KotwOSS/repositories');
+		window.location.assign("https://github.com/orgs/KotwOSS/repositories");
 	}
 </script>
 
@@ -29,7 +29,7 @@
 	<div style:height="100vh" />
 {/if}
 
-<main style:position={pin ? 'fixed' : 'relative'}>
+<main style:position={pin ? "fixed" : "relative"}>
 	<h1 class:show={triggers.trigger(0, anim > 0)}>Projects</h1>
 	<p class:show={triggers.trigger(1, anim > 0.2)}>You can find our projects on here</p>
 	<div class="buttons">
@@ -39,7 +39,7 @@
 </main>
 
 {#if pinDown}
-	<div style:height={pin ? '200vh' : '100vh'} />
+	<div style:height={pin ? "200vh" : "100vh"} />
 {/if}
 
 <style>

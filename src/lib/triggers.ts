@@ -1,5 +1,5 @@
-import { get_store_value } from 'svelte/internal';
-import { writable, type Writable } from 'svelte/store';
+import { get_store_value } from "svelte/internal";
+import { writable, type Writable } from "svelte/store";
 
 export class Triggers {
 	readonly triggers: Writable<number[]>;

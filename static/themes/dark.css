@@ -12,8 +12,15 @@
 	--button-background: linear-gradient(45deg, rgb(223, 64, 43), rgb(255, 154, 60));
 
 	--footer-border: 1px solid rgba(255, 255, 255, 0.1);
-	--footer-emoji: '👋';
+	--footer-emoji: "👋";
+
+	--nav-background: rgba(0, 0, 0, 0);
+	--nav-border: 1px solid rgba(0, 0, 0, 0.1);
+	--nav-color: rgb(0, 0, 0);
 
 	--a-border: 1px solid rgb(184, 58, 0);
 	--a-color: rgb(184, 58, 0);
+
+	--license-border: 1px solid rgba(255, 255, 255, 1);
+	--license-raw-background: rgb(29, 29, 29);
 }
