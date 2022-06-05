@@ -57,24 +57,20 @@ button {
 	color: var(--button-color);
 
 	font-size: 20px;
-	padding: 5px 15px;
+	font-weight: 500;
+
+	padding: 8px 15px;
 
 	outline: none;
 	border: none;
-	border-radius: 10px;
+	border-radius: 15px;
 
 	background: var(--button-background);
-	background-size: 200%;
 
-	transition: all 0.3s ease;
-	font-weight: 500;
-
-	margin: 2px;
+	transition: all 0.2s ease;
 }
 
 button:hover {
 	cursor: pointer;
-	transform: scale(1.05);
-	animation: 1s button infinite linear;
-	background-position-x: 100%;
+	filter: brightness(0.8);
 }

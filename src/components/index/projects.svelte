@@ -74,13 +74,13 @@
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 35px;
 		margin-bottom: 10px;
 	}
 
 	p {
-		font-size: 25px;
-        text-align: center;
+		font-size: 22px;
+		text-align: center;
 	}
 
 	.buttons {
@@ -95,6 +95,6 @@
 	}
 
 	button {
-		font-size: 25px;
+		font-size: 20px;
 	}
 </style>
