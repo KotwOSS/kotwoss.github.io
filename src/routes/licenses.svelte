@@ -10,8 +10,6 @@
 
 	import { licenses_texts } from "$lib/config";
 
-	import { fade } from "svelte/transition";
-
 	import { License, licenses } from "$lib/licenses";
 
 	let search = window.location.search;
@@ -33,7 +31,7 @@
 		<p class="header">A list of <span><Typer texts={licenses_texts} /></span> Licenses</p>
 	</Header>
 
-	<div class="content" in:fade={{ duration: 200 }}>
+	<div class={license !== undefined ? "content" : "list"}>
 		{#if license}
 			<LicenseComponent bind:license />
 		{:else}
@@ -56,6 +54,11 @@
 		padding: 40px 0;
 		margin: auto;
 		max-width: 600px;
+	}
+
+	.list {
+		padding: 40px 0;
+		width: 100vw;
 	}
 
 	main {

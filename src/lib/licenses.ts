@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-namespace */
+
 export class Descriptive {
 	readonly short: string;
 	readonly description: string;
@@ -32,6 +34,11 @@ export namespace Permissions {
 }
 
 export namespace Conditions {
+	export const NOTICE_SOURCE = new Descriptive(
+		"License and copyright notice for source",
+		"A copy of the license and copyright notice must be included with the licensed \
+        material in source form, but is not required for binaries."
+	);
 	export const NOTICE = new Descriptive(
 		"License and copyright notice",
 		"A copy of the license and copyright notice must be included with the licensed material."
@@ -43,11 +50,26 @@ export namespace Conditions {
 	export const SAME_LICENSE = new Descriptive(
 		"Same license",
 		"Modifications must be released under the same license when distributing the \
-    licensed material. In some cases a similar or related license may be used."
+        licensed material. In some cases a similar or related license may be used."
+	);
+	export const SAME_LICENSE_LIBRARY = new Descriptive(
+		"Same license (library)",
+		"Modifications must be released under the same license when distributing the licensed material. \
+        In some cases a similar or related license may be used, or this condition may not apply to works \
+        that use the licensed material as a library."
+	);
+	export const SAME_LICENSE_FILE = new Descriptive(
+		"Same license (file)",
+		"Modifications of existing files must be released under the same license when distributing \
+        the licensed material. In some cases a similar or related license may be used."
 	);
 	export const STATE_CHANGES = new Descriptive(
 		"State changes",
 		"Changes made to the licensed material must be documented."
+	);
+	export const NETWORK_USE = new Descriptive(
+		"Network use is distribution",
+		"Users who interact with the licensed material via network are given the right to receive a copy of the source code."
 	);
 }
 
@@ -59,6 +81,11 @@ export namespace Limitations {
 	export const WARRANTY = new Descriptive(
 		"Warranty",
 		"This license explicitly states that it does NOT provide any warranty."
+	);
+	export const TRADEMARK_USE = new Descriptive(
+		"Trademark use",
+		"This license explicitly states that it does NOT grant trademark rights, \
+        even though licenses without such a statement probably do not grant any implicit trademark rights."
 	);
 }
 
@@ -127,7 +154,7 @@ export namespace Licenses {
 		[Limitations.LIABILITY, Limitations.WARRANTY],
 		"/licenses/mit.txt"
 	);
-	export const GPLv2 = new License(
+	export const GNU_GPLv2 = new License(
 		"gpl-2.0",
 		"GNU GPLv2",
 		"GNU General Public License v2",
@@ -148,7 +175,7 @@ export namespace Licenses {
 		[Limitations.LIABILITY, Limitations.WARRANTY],
 		"/licenses/gpl-2.0.txt"
 	);
-	export const GPLv3 = new License(
+	export const GNU_GPLv3 = new License(
 		"gpl-3.0",
 		"GNU GPLv3",
 		"GNU General Public License v3",
@@ -170,6 +197,128 @@ export namespace Licenses {
 		[Limitations.LIABILITY, Limitations.WARRANTY],
 		"/licenses/gpl-3.0.txt"
 	);
+	export const GNU_AGPLv3 = new License(
+		"agpl-3.0",
+		"GNU AGPLv3",
+		"GNU Affero General Public License v3.0",
+		"The GNU Affero General Public License (AGPL) is a free software license for software and other kinds of works.",
+		"https://www.gnu.org/licenses/agpl-3.0.en.html",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE,
+			Permissions.PATENT_USE
+		],
+		[
+			Conditions.DISCLOSE_SOURCE,
+			Conditions.NOTICE,
+			Conditions.NETWORK_USE,
+			Conditions.SAME_LICENSE,
+			Conditions.STATE_CHANGES
+		],
+		[Limitations.LIABILITY, Limitations.WARRANTY],
+		"/licenses/agpl-3.0.txt"
+	);
+	export const GNU_LGPLv3 = new License(
+		"lgpl-3.0",
+		"GNU LGPLv3",
+		"GNU Lesser General Public License v3.0",
+		"The GNU Lesser General Public License (LGPL) is a free software license for software and other kinds of works.",
+		"https://www.gnu.org/licenses/lgpl-3.0.en.html",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE,
+			Permissions.PATENT_USE
+		],
+		[
+			Conditions.DISCLOSE_SOURCE,
+			Conditions.NOTICE,
+			Conditions.SAME_LICENSE_LIBRARY,
+			Conditions.STATE_CHANGES
+		],
+		[Limitations.LIABILITY, Limitations.WARRANTY],
+		"/licenses/lgpl-3.0.txt"
+	);
+
+	export const MPLv2 = new License(
+		"mpl-2.0",
+		"MPLv2",
+		"Mozilla Public License 2.0",
+		"The Mozilla Public License 2.0 (MPL 2.0) is a permissive license to use and distribute programs or libraries.",
+		"https://www.mozilla.org/en-US/MPL/2.0/",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE,
+			Permissions.PATENT_USE
+		],
+		[Conditions.DISCLOSE_SOURCE, Conditions.NOTICE, Conditions.SAME_LICENSE_LIBRARY],
+		[Limitations.LIABILITY, Limitations.WARRANTY, Limitations.TRADEMARK_USE],
+		"/licenses/mpl-2.0.txt"
+	);
+	export const APACHEv2 = new License(
+		"apache-2.0",
+		"APACHEv2",
+		"Apache License 2.0",
+		"The Apache License, Version 2.0 (Apache-2.0) is a permissive software license.",
+		"https://www.apache.org/licenses/LICENSE-2.0",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE,
+			Permissions.PATENT_USE
+		],
+		[Conditions.NOTICE, Conditions.STATE_CHANGES],
+		[Limitations.LIABILITY, Limitations.WARRANTY, Limitations.TRADEMARK_USE],
+		"/licenses/apache-2.0.txt"
+	);
+	export const BSLv1 = new License(
+		"bsl-1.0",
+		"BSLv1",
+		"Boost Software License 1.0",
+		"The Boost Software License (BSL-1.0) is a permissive software license.",
+		"https://www.boost.org/LICENSE_1_0.txt",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE
+		],
+		[Conditions.NOTICE_SOURCE],
+		[Limitations.LIABILITY, Limitations.WARRANTY],
+		"/licenses/bsl-1.0.txt"
+	);
+	export const UNLICENSE = new License(
+		"unlicense",
+		"UNLICENSE",
+		"The Unlicense",
+		"The Unlicense is a permissive license that allows you to do almost anything you want with your code.",
+		"https://unlicense.org/",
+		[
+			Permissions.COMMERCIAL_USE,
+			Permissions.DISTRIBUTION,
+			Permissions.MODIFICATION,
+			Permissions.PRIVATE_USE
+		],
+		[],
+		[Limitations.LIABILITY, Limitations.WARRANTY],
+		"/licenses/unlicense.txt"
+	);
 }
 
-export const licenses: License[] = [Licenses.MIT, Licenses.GPLv2, Licenses.GPLv3];
+export const licenses: License[] = [
+	Licenses.MIT,
+	Licenses.GNU_GPLv2,
+	Licenses.GNU_GPLv3,
+	Licenses.GNU_AGPLv3,
+	Licenses.GNU_LGPLv3,
+	Licenses.MPLv2,
+	Licenses.APACHEv2,
+	Licenses.BSLv1,
+	Licenses.UNLICENSE
+];

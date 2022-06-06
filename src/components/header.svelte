@@ -66,6 +66,7 @@
 		flex-direction: column;
 		margin-bottom: 20px;
 		width: 100%;
+		overflow: hidden;
 	}
 
 	.wrapper {

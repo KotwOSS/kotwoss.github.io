@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-2bd7a31d.js",
+    "file": "start-121820b1.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-d15df9b9.js",
-      "_index-ebc3c2b3.js",
+      "_index-520be29f.js",
+      "_index-b09e3155.js",
       "_singletons-d1fb5791.js"
     ],
     "dynamicImports": [
@@ -17,12 +17,12 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-978e6a9d.js",
+    "file": "pages/__layout.svelte-fd855072.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d15df9b9.js",
+      "_index-520be29f.js",
       "_config-9b914339.js"
     ],
     "css": [
@@ -30,23 +30,23 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-a2b0f937.js",
+    "file": "error.svelte-aa0b904a.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d15df9b9.js"
+      "_index-520be29f.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-2b8b8fb0.js",
+    "file": "pages/index.svelte-738db412.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d15df9b9.js",
-      "_navbar-6cfd8896.js",
-      "_index-ebc3c2b3.js",
+      "_index-520be29f.js",
+      "_navbar-6f9f20c9.js",
+      "_index-b09e3155.js",
       "_config-9b914339.js",
       "_singletons-d1fb5791.js"
     ],
@@ -55,44 +55,44 @@
     ]
   },
   "src/routes/licenses.svelte": {
-    "file": "pages/licenses.svelte-a54449ad.js",
+    "file": "pages/licenses.svelte-531e445f.js",
     "src": "src/routes/licenses.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d15df9b9.js",
-      "_navbar-6cfd8896.js",
-      "_licenses-bacfaddc.js",
+      "_index-520be29f.js",
+      "_navbar-6f9f20c9.js",
+      "_licenses-7fc289b1.js",
       "_config-9b914339.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
-      "assets/pages/licenses.svelte-0c81036f.css"
+      "assets/pages/licenses.svelte-460ab806.css"
     ]
   },
   "src/routes/projects.svelte": {
-    "file": "pages/projects.svelte-65ba160a.js",
+    "file": "pages/projects.svelte-eeb8f736.js",
     "src": "src/routes/projects.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d15df9b9.js",
-      "_navbar-6cfd8896.js",
-      "_licenses-bacfaddc.js",
+      "_index-520be29f.js",
+      "_navbar-6f9f20c9.js",
+      "_licenses-7fc289b1.js",
       "_config-9b914339.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
-      "assets/pages/projects.svelte-cecf3b0d.css"
+      "assets/pages/projects.svelte-4cc0159f.css"
     ]
   },
-  "_index-d15df9b9.js": {
-    "file": "chunks/index-d15df9b9.js"
+  "_index-520be29f.js": {
+    "file": "chunks/index-520be29f.js"
   },
-  "_index-ebc3c2b3.js": {
-    "file": "chunks/index-ebc3c2b3.js",
+  "_index-b09e3155.js": {
+    "file": "chunks/index-b09e3155.js",
     "imports": [
-      "_index-d15df9b9.js"
+      "_index-520be29f.js"
     ]
   },
   "_singletons-d1fb5791.js": {
@@ -101,23 +101,23 @@
   "_config-9b914339.js": {
     "file": "chunks/config-9b914339.js"
   },
-  "_navbar-6cfd8896.js": {
-    "file": "chunks/navbar-6cfd8896.js",
+  "_navbar-6f9f20c9.js": {
+    "file": "chunks/navbar-6f9f20c9.js",
     "imports": [
-      "_index-d15df9b9.js",
+      "_index-520be29f.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
-      "assets/navbar-df1a66ca.css"
+      "assets/navbar-0c6a4fcf.css"
     ]
   },
-  "_licenses-bacfaddc.js": {
-    "file": "chunks/licenses-bacfaddc.js",
+  "_licenses-7fc289b1.js": {
+    "file": "chunks/licenses-7fc289b1.js",
     "imports": [
-      "_index-d15df9b9.js"
+      "_index-520be29f.js"
     ],
     "css": [
-      "assets/licenses-ed16c0f0.css"
+      "assets/licenses-2a0c1d73.css"
     ]
   }
 }

@@ -6,6 +6,13 @@
 
 	let copy: string | undefined;
 	license.fetchCopy().then((c) => (copy = c));
+
+	function gotoWebsite() {
+		window.open(license.link, "_blank");
+	}
+	function gotoChooseALicense() {
+		window.open(`https://choosealicense.com/licenses/${license.descriptor}`, "_blank");
+	}
 </script>
 
 <div class="license">
@@ -14,6 +21,11 @@
 		<h3>{license.short}</h3>
 	</div>
 	<p class="short">{@html license.description}</p>
+
+	<div class="controls">
+		<button on:click={gotoWebsite}>Website</button>
+		<button on:click={gotoChooseALicense}>ChooseALicense</button>
+	</div>
 
 	<div class="terms">
 		<div class="permissions">
@@ -58,12 +70,9 @@
 			</ul>
 		</div>
 	</div>
-	<textarea
-		class="raw"
-		disabled={true}
-		spellcheck="false"
-		value={copy ? copy : "Downloading copy..."}
-	/>
+	<pre class="raw">
+        {copy ? copy : "Downloading copy..."}
+    </pre>
 </div>
 
 <style>
@@ -71,13 +80,11 @@
 		margin-top: 20px;
 		border: var(--license-raw-border);
 		background-color: var(--license-raw-background);
-		padding: 10px 10px;
+		padding: 10px;
 		font-size: 14px;
-		border-radius: 10px;
+		border-radius: 5px;
 		color: var(--color-secondary);
-		height: 500px;
-		min-height: 500px;
-		overflow-y: scroll;
+		overflow-y: hidden;
 		overflow-x: scroll;
 		white-space: pre;
 		word-break: keep-all;
@@ -96,7 +103,7 @@
 	}
 
 	.license {
-		padding: 20px 30px;
+		padding: 20px 20px;
 		font-size: 18px;
 		font-weight: 400;
 		display: flex;
@@ -105,7 +112,7 @@
 	}
 
 	.terms {
-		margin-top: 10px;
+		margin-top: 20px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
@@ -163,5 +170,12 @@
 
 	.limitations {
 		--bullet-color: rgb(255, 38, 0);
+	}
+
+	.controls {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 15px;
+		row-gap: 5px;
 	}
 </style>

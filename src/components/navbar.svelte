@@ -13,7 +13,7 @@
 		background: var(--nav-background);
 		border-bottom: var(--nav-border);
 		color: var(--nav-color);
-		padding: 0 5vw;
+		padding: 0 calc(10vw - 30px);
 		height: var(--nav-height);
 		width: 100%;
 		display: flex;
@@ -23,7 +23,7 @@
 	}
 
 	.links {
-		column-gap: 20px;
+		column-gap: 15px;
 		margin-left: auto;
 		display: flex;
 		justify-content: center;

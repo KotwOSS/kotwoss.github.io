@@ -28,6 +28,9 @@ html {
 body {
 	background-color: var(--background);
 	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100vw;
+	height: 100vh;
 }
 
 a {

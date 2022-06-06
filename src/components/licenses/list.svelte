@@ -14,7 +14,15 @@
 <style>
 	.licenses {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
 		row-gap: 20px;
+		column-gap: 20px;
+		width: 100%;
+	}
+
+	.licenses > :global(*) {
+		width: min(600px, 100%);
 	}
 </style>

@@ -31,11 +31,13 @@
 		<p class="header">All of the <span><Typer texts={projects_texts} /></span> Projects we made</p>
 	</Header>
 
-	{#if project}
-		<ProjectComponent bind:project />
-	{:else}
-		<ProjectList {projects} />
-	{/if}
+	<div class={project !== undefined ? "content" : "list"}>
+		{#if project}
+			<ProjectComponent bind:project />
+		{:else}
+			<ProjectList {projects} />
+		{/if}
+	</div>
 </main>
 
 <style>
@@ -46,6 +48,17 @@
 		to {
 			opacity: 1;
 		}
+	}
+
+	.content {
+		padding: 40px 0;
+		margin: auto;
+		max-width: 600px;
+	}
+
+	.list {
+		padding: 40px 0;
+		width: 100vw;
 	}
 
 	main {
